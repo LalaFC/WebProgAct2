@@ -517,6 +517,13 @@ body {
   .img-container {
     margin: 0;
   }
+  #main-content{
+    padding-left: 10px;
+    width: 100%
+  }
+  #skills{
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -568,6 +575,14 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
   }
+  #main-content{
+    padding-left: 10px;
+    width: 100%;
+  }
+  #skills{
+    width: 100%;
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -578,11 +593,25 @@ body {
   .img-container .btn {
     font-size: 0.7rem;
   }
+  #main-content{
+    width: 75%;
+    padding-left: 18%;
+  }
+  #skills{
+    width: 25%;
+  }
 }
 
 @media (orientation: landscape) and (max-height: 500px) {
   .showcase-area {
     height: 50vmax;
+  }
+  #main-content{
+    width: 75%;
+    padding-left: 18%;
+  }
+  #skills{
+    width: 25%;
   }
 }
 
