@@ -210,7 +210,7 @@ body {
   font-weight: 400;
   margin-bottom: 40px;
   text-transform: uppercase;
-  color: #555;
+  color: rgb(2, 2, 2)000;
 }
 
 .food-container {
@@ -439,7 +439,7 @@ body {
     height: 4px;
     width: 100%;
     border-radius: 10px;
-    background: #333;
+    background: #ffffff;
   }
 
   .navbar-container .hamburger-lines .line1 {
@@ -489,14 +489,17 @@ body {
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
     transform: rotate(35deg);
+    background: black;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
     transform: scaleY(0);
+    background: black;
   }
 
   .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-35deg);
+    background: black;
   }
 
   /* ......./ food /......... */
@@ -517,12 +520,38 @@ body {
   .img-container {
     margin: 0;
   }
+
+  .navbar a{
+    color: black;
+  }
+
+  #contacts{
+    width: 100%;
+    flex-direction: row;
+    background: none;
+    padding: 20px;
+    flex-direction: row-reverse;
+  }
+  .network-link{
+    padding: 5px;
+  }
+  #contactsLabel{
+    display: none;
+  }
+
   #main-content{
-    padding-left: 10px;
+    padding-left: 18%px;
     width: 100%
   }
+
   #skills{
     width: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  #skillWheel{
+    flex-direction: row;
   }
 }
 
@@ -575,8 +604,17 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
   }
+
+  #contacts{
+    padding-top: 20px;
+  }
+
+  #contactsLabel{
+    display: none;
+  }
+
   #main-content{
-    padding-left: 10px;
+    padding-left: 15px;
     width: 100%;
   }
   #skills{
@@ -597,8 +635,62 @@ body {
     width: 75%;
     padding-left: 18%;
   }
+
+  #contacts{
+    width: 16.66%;
+    flex-direction: row;
+    align-items: left;
+    padding: 20px;
+    flex-direction: column;
+    background: linear-gradient(to right,white,rgba(255, 255, 255, 0));
+  }
+  .network-link{
+    padding: 5px;
+  }
+  #contactsLabel{
+    display: block;
+  }
+
   #skills{
     width: 25%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  .skillWheel{
+    flex-direction: column;
+  }
+}
+
+@media(min-width: 1201px){
+  #main-content{
+    width: 75%;
+    padding-left: 18%;
+  }
+
+  #contacts{
+    width: 16.66%;
+    flex-direction: row;
+    align-items: left;
+    padding: 20px;
+    flex-direction: column;
+    background: linear-gradient(to right,white,rgba(255, 255, 255, 0));
+  }
+  .network-link{
+    padding: 5px;
+  }
+  #contactsLabel{
+    display: block;
+  }
+
+  #skills{
+    width: 25%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  .skillWheel{
+    flex-direction: column;
   }
 }
 
@@ -620,7 +712,7 @@ body {
 .row::after {
   content: "";
   clear: both;
-  display: table;
+  display: flex;
 }
 
 [class*="col-"] {
@@ -643,19 +735,21 @@ body {
 
   /* ......./ Self-Made /......... */
 
+  /* ......./ Stashed /......... 
+    align-items: left;
+    flex-direction: column;
+    background: linear-gradient(to right,white,rgba(255, 255, 255, 0));
+  */
+
+
   /* ......./ Contacts /......... */
 
 #contacts {
     position: fixed;
-    background: linear-gradient(to right,white,rgba(255, 255, 255, 0));
-    z-index: 2;
-    flex-direction: column;
+    z-index: 12;
     justify-content: flex-start;
-    align-items: left;
     display: flex;
     opacity: 100%;
-    padding-top:10px;
-
 }
 #contacts h2{
   align-self: center;
@@ -664,6 +758,9 @@ body {
 #contacts a:link{
   color: black;
   text-decoration: none;
+}
+#contacts a:visited{
+  color: rgb(73, 73, 73);
 }
 #contacts a:hover h4{
   color: whitesmoke;
@@ -712,8 +809,15 @@ img {
 
   /* ......./ Main Content /......... */
 
-#main-content{
-    padding-left: 18%;
+#fun-facts h1{
+  color: #117964;
+  font-size: 1.5rem;
+  text-align: center;
+  font-style: oblique;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px #080808;  
 }
 
   /* ......./ Skills /......... */
@@ -739,11 +843,30 @@ img {
 }
 
 #skills{
-  display: flexbox;
-  flex-direction: row;
-  flex-shrink: inherit;
+  background: linear-gradient(to left,white,rgba(255, 255, 255, 0));
+  display: flex;
+  opacity: 100%;
+  padding: 20px;
 }
 
-#skillWheel{
-  padding-top: 90px;
+#SkillsHeader{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: rgb(2, 2, 2)000;
+}
+
+.skillWheel{
+  align-items: center;
+  display: flex;
+  align-self: center;
+  padding-top: 10px;
+}
+.skillWheel h4{
+  font-size: large;
+  width: 160px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
