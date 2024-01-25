@@ -599,8 +599,6 @@ body {
   padding: 15px;
   box-sizing: border-box;
 }
-
-
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -615,13 +613,108 @@ body {
 .col-12 {width: 100%;}
 
   /* ......./ Self-Made /......... */
-  #contacts{
-    position: fixed;
-    height: 100%;
-    background: repeating-linear-gradient(white,rgba(255, 255, 255, 0));
-    z-index: 2;
-  }
 
-  #main-content{
+  /* ......./ Contacts /......... */
+
+#contacts {
+    position: fixed;
+    background: linear-gradient(to right,white,rgba(255, 255, 255, 0));
+    z-index: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    display: flex;
+    opacity: 100%;
+    padding-top:10px;
+
+}
+#contacts h2{
+  align-self: center;
+  padding-bottom: 20%;
+}
+#contacts a:link{
+  color: black;
+  text-decoration: none;
+}
+#contacts a:hover h4{
+  color: whitesmoke;
+  scale: 120%;
+  text-shadow: 5px 5px 5px black;
+}
+.network-link {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: center;
+}
+.icon-holder {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.322);
+    border: 1px solid black;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s;
+    display: flex;
+    transform: rotate(45deg);
+    opacity: 100%;
+    margin-right:10px ;
+}
+.icon-holder:hover{
+  background: black;
+}
+.image {
+    transform: rotate(-45deg);
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    border: 0;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+  /* ......./ Main Content /......... */
+
+#main-content{
     padding-left: 18%;
-  }
+}
+
+  /* ......./ Skills /......... */
+
+#appearance8 .rs-range-color {
+    background: radial-gradient(ellipse at bottom, rgba(0, 0, 0, 1) 0%, rgba(48, 7, 36, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(0, 0, 0, 1) 100%);
+}
+
+#appearance8 .rs-path-color {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+
+#appearance8 .rs-handle {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+
+#appearance8 .rs-border {
+    border-color: white;
+}
+
+#appearance8 .rs-bg-color{
+  color: rgba(255, 255, 255, 0);
+}
+
+#skills{
+  display: flexbox;
+  flex-direction: row;
+  flex-shrink: inherit;
+}
+
+#skillWheel{
+  padding-top: 90px;
+}
