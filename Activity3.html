@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity3_WebProg</title>
+    <script>
+    function myFunction() {
+    document.getElementById("Q1").innerHTML = "Paragraph changed.";
+    }
+
+    function Func2(){
+        document.getElementById("Q2").style.fontStyle = "italic";
+    }
+    function myFunction3() {
+    document.getElementById("Hide/Show").style.display='none';
+    }
+    function myFunction4() {
+        document.getElementById("Hide/Show").style.display='block';
+    }
+    function myFunction5() {
+        console.log("Hello World");
+    }
+    function Func6()
+        {alert("Welcome to CIIT");};
+
+    function Func7(){
+        let x=5; let y=3; 
+        document.getElementById("Q7").innerHTML = document.getElementById("Q7").innerHTML = "Result = " + x**y;
+    }
+
+    </script>
+</head>
+<body>
+<h2>Activity 3 - JS</h2>
+
+<p id="Q1">1. Change Content</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p id="Q2">2. Change Font Style</p>
+<button type="button" onclick="Func2()">Try it</button>
+
+<div id="Hide/Show" style="padding-top: 15px; color: red;">Hello</div>
+
+<p id="Q3">3. Hide Element</p>
+<button type="button" onclick="myFunction3()">Try it</button>
+
+<p id="Q4">4. Show Element</p>
+<button type="button" onclick="myFunction4()">Try it</button>
+
+<p id="Q5">5. Display "Hello World" in console.</p>
+<button type="button" onclick="myFunction5()">Try it</button>
+
+<p id="Q6">6. Display "Welcome to CIIT" in alert box.</p>
+<button type="button" onclick="Func6()">Try it</button>
+
+<p>7. x=5; y=3; Compute x^y and display the result.</p>
+<p id="Q7">Result:</p>
+<button type="button" onclick="Func7()">Try it</button>
+
+</body>
+</html>
